@@ -1,20 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Version>1.0.0</Version>
     <Title>Webion.Mongo</Title>
     <Authors>Webion SRL</Authors>
     <Description>Small utilities for configuring MongoDb clients more easily</Description>
+    <PackageLicense>https://licenses.nuget.org/MIT</PackageLicense>
     <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/webion-hub/Webion.Mongo</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
   </ItemGroup>
+  
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
